@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+ <script src="https://fontawesome.com" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --portfolio-bg: #0E151D;
+      --portfolio-section: #141D27;
+      --portfolio-card: #16202B;
+      --portfolio-text: #F0F4F7;
+      --portfolio-muted: #A9B4C0;
+      --portfolio-accent: #FF2A4B;
+      --portfolio-hover: #6CC4D0;
+      --portfolio-border: #233140;
+    }
+    html, body {
+      background-color: #0E151D !important;
+      color: #F0F4F7;
+    }
+    body.bg-surface {
+      background-color: #0E151D !important;
+    }
+    .bg-surface {
+      background-color: #0E151D !important;
+    }
+    .bg-surface-container-low, .bg-surface-container-lowest {
+      background-color: #141D27 !important;
+    }
+    .bg-primary {
+      background-color: #FF2A4B !important;
+    }
+    .text-on-surface {
+      color: #F0F4F7 !important;
+    }
+    .text-secondary, .text-on-surface-variant {
+      color: #9AA7B4 !important;
+    }
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--portfolio-bg);
+        color: var(--portfolio-text);
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    header {
+      background-color: rgba(14, 21, 29, 0.92) !important;
+      border-bottom: 1px solid #233140;
+    }
+    nav {
+      background-color: #141D27 !important;
+    }
+    section {
+      color: #F0F4F7;
+    }
+    .bg-surface-container {
+      background-color: #1A2430 !important;
+    }
+    a:hover, button:hover {
+      transition: all 0.2s ease;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#1d3a45", "tertiary": "#6CC4D0", "primary-container": "#FF2A4B", "inverse-on-surface": "#0E151D", "secondary": "#9AA7B4", "primary-fixed": "#3A1A26", "on-secondary": "#0E151D", "background": "#0E151D", "surface-container-low": "#141D27", "on-primary-container": "#FFFFFF", "on-tertiary-fixed": "#6CC4D0", "on-secondary-container": "#8FD3DC", "surface-dim": "#0A1018", "surface-tint": "#FF2A4B", "on-secondary-fixed": "#6CC4D0", "outline-variant": "#233140", "tertiary-container": "#1d3a45", "secondary-container": "#1B3541", "on-surface-variant": "#A9B4C0", "on-background": "#F0F4F7", "outline": "#4A5968", "surface-variant": "#1A2430", "primary": "#FF4D68", "surface-container-high": "#202C39", "surface-container-lowest": "#16202B", "surface-container": "#1A2430", "on-surface": "#F0F4F7", "surface": "#0E151D", "secondary-fixed-dim": "#4FA9B6", "on-primary-fixed-variant": "#FF8A9C", "on-primary": "#FFFFFF", "on-tertiary": "#0E151D", "primary-fixed-dim": "#FF8A9C", "tertiary-fixed-dim": "#6CC4D0", "tertiary-fixed": "#1d3a45", "surface-container-highest": "#26323F", "on-tertiary-fixed-variant": "#8FD3DC", "error-container": "#4A1620", "surface-bright": "#1A2430", "inverse-surface": "#F0F4F7", "on-primary-fixed": "#FF4D68", "on-error-container": "#FFB4BF", "on-secondary-fixed-variant": "#8FD3DC", "on-tertiary-container": "#8FD3DC", "inverse-primary": "#FF2A4B", "error": "#FF2A4B", "on-error": "#FFFFFF" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin": "4rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin-mobile": "1.25rem" }, "fontFamily": { "body-xl": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-2xl": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Playfair Display"], "code-inline": ["JetBrains Mono"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-2xl-mobile": ["Playfair Display"], "headline-xl-mobile": ["Playfair Display"] }, "fontSize": { "body-xl": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-2xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-2xl-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0E151D]/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(45,41,38,0.03)]">
+    <div
+      class="h-20 max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="home"
+          href="#"><div class="h-10 w-10 rounded-3xl bg-[#FF2A4B] flex items-center justify-center text-lg font-bold text-white">JD</div>
+          <div class="hidden sm:flex flex-col"><span
+              class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Jundel Eivan del Carmen
+              </span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">BS
+              Information Technology</span></div>
+        </a>
+        <div
+          class="hidden xl:flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary-container/60 shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]">
+          <span class="relative flex h-2 w-2"><span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span
+              class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span
+            class="font-label-sm text-label-sm text-on-secondary-container">Available for Hire • 2027 Grad</span></div>
+      </div>
+      <nav
+        id="main-nav" class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-surface-container-low shadow-[inset_0_1px_2px_rgba(43, 41, 38, 0.08)]">
+        <a data-path="home"
+          class="nav-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all"
+          data-path="home" href="#home">Home</a>
+          <a data-path="about"
+          class="nav-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all"
+          data-path="about" href="#about">About</a>
+          <a data-path="skills"
+          class="nav-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all"
+          data-path="skills" href="#skills">Skills</a>
+          <a data-path="projects"
+          class="nav-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all"
+          data-path="projects" href="#projects">Projects</a>
+          <a data-path="contact"
+          class="nav-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all"
+          data-path="contact" href="#contact">Contact</a></nav>
+      <div class="flex items-center gap-space-sm"><a
+          class="hidden sm:inline-flex items-center gap-space-xs px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_4px_16px_rgba(255,42,75,0.30)] hover:bg-primary hover:text-on-primary hover:shadow-[0_4px_20px_rgba(255,42,75,0.45)] transition-all"
+          data-path="contact" href="#"><span
+            class="material-symbols-outlined text-[18px]">download</span><span>Resume</span></a>
+        <div class="flex items-center pl-space-xs"><img alt="Profile"
+            class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/40 shadow-sm"
+            src="jundel.jpg"/>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-180px)]">
+    <div class="flex flex-col w-full">
+      
+      <!-- ==========================================
+       SECTION 1: HERO / HOME (id="home")
+       ========================================== -->
+      <section class="relative w-full py-12 md:py-20 lg:py-24 overflow-hidden" id="home">
+        <div
+          class="absolute -top-24 left-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10">
+        </div>
+        <div
+          class="absolute bottom-10 right-10 w-80 h-80 bg-secondary-container/40 rounded-full blur-3xl pointer-events-none -z-10">
+        </div>
+        <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+            <!-- Left Column: Introduction & Intent -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+              <!-- Status Pill -->
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/80 text-on-secondary-container shadow-sm">
+                <span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+                <span class="font-label-md text-label-md tracking-wide">Fourth-Year IT Student • Class of 2026-2027 • Open to
+                  Roles</span>
+              </div>
+              <!-- Main Hero Headline -->
+              <h1
+                class="font-headline-2xl text-headline-2xl-mobile md:text-headline-2xl text-on-surface tracking-tight leading-tight">
+                Hi, I’m <span class="italic text-primary">Jundel Eivan del Carmen</span> 👋 — An aspiring IT professional passionate about
+                technology and creating useful digital solutions.
+              </h1>
+              <!-- Subtext Description -->
+              <p class="font-body-xl text-body-lg md:text-body-xl text-secondary max-w-xl leading-relaxed">
+                I am a fourth-year BSIT student who can design and build responsive websites, develop database-driven
+                applications with MySQL and Python, and create clean interfaces in Figma. I also handle computer
+                troubleshooting and basic networking, and I turn real-world problems into working digital solutions.
+              </p>
+              <!-- Action CTAs -->
+              <div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+                <a class="scroll-link inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary shadow-md hover:shadow-lg transition-all duration-300 font-label-lg text-label-lg"
+                  href="#projects">
+                  <span>View My Projects</span>
+                  <span
+                    class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_downward</span>
+                </a>
+                <a class="scroll-link inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-high hover:bg-secondary-container text-on-surface font-label-lg text-label-lg transition-colors shadow-sm"
+                  href="#contact">
+                  <span class="material-symbols-outlined text-on-surface">chat_bubble_outline</span>
+                  <span class="text-on-surface">Get in Touch</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary hover:text-on-surface font-label-md text-label-md transition-colors"
+                  href="#contact">
+                  <span class="material-symbols-outlined text-[18px]">article</span>
+                  <span>Download Resume</span>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-5 relative flex justify-center items-center">
+              <div
+                class="absolute inset-0 bg-gradient-to-tr from-primary-fixed/40 via-secondary-container/40 to-surface-container rounded-3xl transform rotate-2 scale-105 filter blur-lg -z-10">
+              </div>
+              <div
+                class="relative w-full max-w-[380px] sm:max-w-[420px] bg-surface-container-lowest p-4 rounded-3xl shadow-xl">
+                <div
+                  class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container shadow-inner">
+                  <img alt="Portrait photo of Jundel Eivan del Carmen, senior IT student"
+                    class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    src="jundel2.jpg" />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60">
+                  </div>
+                  <div class="absolute bottom-3 left-3 right-3 text-white">
+                    <p class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow">Jundel Eivan del Carmen</p>
+                    <p class="font-code-inline text-code-inline text-primary-fixed tracking-wide">B.S. Information
+                      Technology</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute -top-4 -right-4 sm:-right-6 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg flex items-center gap-2 transform rotate-2 hover:rotate-0 transition-transform">
+                  <span class="p-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+                    <span class="material-symbols-outlined text-[18px]">military_tech</span>
+                  </span>
+                  <div class="flex flex-col">
+                    <span class="font-label-sm text-label-sm text-primary font-bold">Web • Database • UI/UX</span>
+                    <span class="font-body-sm text-body-sm text-secondary">Core Strengths</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==========================================
+       SECTION 2: ABOUT ME (id="about")
+       ========================================== -->
+      <section class="w-full py-16 md:py-24 bg-surface-container-low/60" id="about">
+        <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col items-center text-center mb-12 md:mb-16">
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider mb-3">
+              <span class="material-symbols-outlined text-[14px]">person</span>
+              <span>Chapter 01</span>
+            </div>
+            <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-semibold">About
+              Me</h2>
+            <p class="font-body-lg text-body-lg text-secondary max-w-xl mt-2">
+              I am an Information Technology student who can build responsive websites, work with databases,
+              design user-friendly interfaces, and troubleshoot computer systems. I am eager to gain
+              experience, sharpen my abilities, and apply what I have learned through school projects.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <!-- Card 1 -->
+            <div
+              class="flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-6 shadow-sm">
+                  <span class="material-symbols-outlined text-[24px]">school</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Educational Background
+                </h3>
+                <p class="font-label-lg text-label-lg text-primary mb-4">
+                  B.S. in Information Technology
+                </p>
+                <p class="font-body-sm text-body-sm text-secondary mb-4">
+                  Currently studying at Cebu Eastern College, Fourth-Year BSIT Student
+                </p>
+                <div class="space-y-2 mt-4">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Key
+                    Coursework:</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container font-code-inline text-code-inline text-on-surface">Web
+                      Development</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container font-code-inline text-code-inline text-on-surface">Database
+                      Management</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container font-code-inline text-code-inline text-on-surface">Networking</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container font-code-inline text-code-inline text-on-surface">Information
+                      Security</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container font-code-inline text-code-inline text-on-surface">Human-Computer
+                      Interaction (HCI)</span>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-surface-container font-code-inline text-code-inline text-on-surface">Software
+                      Development</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 flex items-center justify-between text-secondary">
+                <span class="font-body-sm text-body-sm flex items-center gap-1">
+                  <strong>Academic Status: </strong> Currently Enrolled
+                </span>
+                <span class="font-code-inline text-code-inline">2026–2027</span>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-6 shadow-sm">
+                  <span class="material-symbols-outlined text-[24px]">palette</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Personal Interests</h3>
+                <p class="font-label-lg text-label-lg text-primary mb-4">
+                  Curiosity Beyond the Classroom
+                </p>
+                <p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+                  When I'm not studying or working on school projects, I enjoy watching movies, exploring new technologies,
+                  and learning new skills that can help me grow as an IT student.
+                </p>
+                <ul class="space-y-3 mt-4 text-on-surface-variant font-body-sm text-body-sm">
+                  <li class="flex items-start gap-2.5">
+                    <span>🎬 Watching Movies</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span>💻 Exploring New Technology</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span>🧩 Problem Solving &amp; Debugging</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span>🎨 UI/UX Design</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span>🌐 Web Development</span>
+                  </li>
+                  <li class="flex items-start gap-2.5"></li>
+                    <span>🎮 Playing Online Games</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-6 pt-4 flex items-center gap-2 text-secondary">
+                <span class="font-code-inline text-code-inline text-secondary">Hobbyist • Creative Thinker • Lifelong Learner</span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-6 shadow-sm">
+                  <span class="material-symbols-outlined text-[24px]">flag</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Career Goals</h3>
+                <p class="font-label-lg text-label-lg text-primary mb-4">
+                  Building My Future in Information Technology
+                </p>
+                <p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+                  As a fourth-year BSIT student, my goal is to improve my technical skills, gain practical experience,
+                  and find a career where I can apply my knowledge, learn new technologies, and grow professionally.
+                </p>
+                <strong>Career Paths: </strong>
+                <div class="space-y-3 mt-4">
+                  <div class="p-3 rounded-2xl bg-surface-container-low flex items-center gap-3">
+                    <div class="icon">💻</div>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface">Web Developer</p>
+                      <p class="font-body-sm text-body-sm text-secondary">Creating and maintaining websites and web applications</p>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-surface-container-low flex items-center gap-3">
+                    <div class="icon">🖥️</div>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface">Software Developer</p>
+                      <p class="font-body-sm text-body-sm text-secondary">Developing software solutions to solve real-world problems</p>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-surface-container-low flex items-center gap-3">
+                    <div class="icon">🔒</div>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface">IT Support Specialist</p>
+                      <p class="font-body-sm text-body-sm text-secondary">Helping users solve technical problems and maintain computer systems</p>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-surface-container-low flex items-center gap-3">
+                    <div class="icon">🌐</div>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface">UI/UX Design</p>
+                      <p class="font-body-sm text-body-sm text-secondary">Designing user-friendly and visually appealing interfaces</p>
+                    </div>
+                  </div>
+                  <p class="mt6 text-sm"><strong>My Goal: </strong>To become a skilled IT professional and build a successful career in technology.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==========================================
+       SECTION 3: TECHNICAL EXPERTISE & IT SKILLS (id="skills")
+       ========================================== -->
+      <section class="w-full py-16 md:py-24 bg-surface" id="skills">
+        <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider mb-3">
+                <span class="material-symbols-outlined text-[14px]">tune</span>
+                <span>Chapter 02</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-semibold">
+                Technical Expertise &amp; IT Skills
+              </h2>
+              <p class="font-body-lg text-body-lg text-secondary max-w-xl mt-2">
+                What I can do: write code in HTML, CSS, JavaScript and C++, build responsive web pages, design and query MySQL
+                databases, and support computer systems. Skills developed through coursework, laboratory activities, and hands-on IT projects.
+              </p>
+            </div>
+            <!-- Filter Tags / Quick Indicators -->
+            <div class="flex flex-wrap items-center gap-2">
+              <button
+                class="skill-filter-btn px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm transition-all"
+                data-target="all" type="button">All Domains</button>
+              <button
+                class="skill-filter-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all"
+                data-target="programming" type="button">Code</button>
+              <button
+                class="skill-filter-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all"
+                data-target="frontend" type="button">Web</button>
+              <button
+                class="skill-filter-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all"
+                data-target="data" type="button">Data</button>
+              <button
+                class="skill-filter-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all"
+                data-target="infra" type="button">Infra</button>
+            </div>
+          </div>
+          <!-- 4 Skill Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <!-- Skill Card -->
+            <div
+              class="skill-card p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-lg transition-all"
+              data-domain="programming">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                    <span class="material-symbols-outlined text-[22px]">code</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Programming &amp; Scripting</h3>
+                    <span class="font-body-sm text-body-sm text-secondary">Programming languages and coding fundamentals</span>
+                  </div>
+                </div>
+                <span class="font-code-inline text-code-inline text-primary">01 // CODE</span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Java</span>
+                    <span class="font-code-inline text-code-inline text-secondary">80%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Python</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">JavaScript</span>
+                    <span class="font-code-inline text-code-inline text-secondary">70%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">C++</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-secondary-fixed-dim" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">SQL</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Skill Card 2 -->
+            <div
+              class="skill-card p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-lg transition-all"
+              data-domain="frontend">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+                    <span class="material-symbols-outlined text-[22px]">devices</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Web &amp; Frontend Development</h3>
+                    <span class="font-body-sm text-body-sm text-secondary">Website development and user interface design</span>
+                  </div>
+                </div>
+                <span class="font-code-inline text-code-inline text-primary">02 // WEB</span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">HTML & CSS</span>
+                    <span class="font-code-inline text-code-inline text-secondary">85%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">JavaScript</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Responsive Web Design</span>
+                    <span class="font-code-inline text-code-inline text-secondary">80%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">UI / UX Design with Figma</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Bootstrap or Tailwind CSS</span>
+                    <span class="font-code-inline text-code-inline text-secondary">65%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Skill Card 3 -->
+            <div
+              class="skill-card p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-lg transition-all"
+              data-domain="data">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+                    <span class="material-symbols-outlined text-[22px]">database</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Database &amp; Backend</h3>
+                    <span class="font-body-sm text-body-sm text-secondary">Database management and application development</span>
+                  </div>
+                </div>
+                <span class="font-code-inline text-code-inline text-primary">03 // DATA</span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">MySQL</span>
+                    <span class="font-code-inline text-code-inline text-secondary">80%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Database Design</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">CRUD Operations</span>
+                    <span class="font-code-inline text-code-inline text-secondary">80%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Python Django</span>
+                    <span class="font-code-inline text-code-inline text-secondary">70%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">PHP or Java Backend</span>
+                    <span class="font-code-inline text-code-inline text-secondary">65%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Skill Card 4 -->
+            <div
+              class="skill-card p-6 md:p-8 rounded-3xl bg-surface-container-lowest shadow-md hover:shadow-lg transition-all"
+              data-domain="infra">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                    <span class="material-symbols-outlined text-[22px]">cloud</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">IT Systems, DevOps &amp; Tools</h3>
+                    <span class="font-body-sm text-body-sm text-secondary">Development tools and basic IT support</span>
+                  </div>
+                </div>
+                <span class="font-code-inline text-code-inline text-primary">04 // INFRA</span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Git &amp; GitHub</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Visual Studio Code</span>
+                    <span class="font-code-inline text-code-inline text-secondary">90%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-secondary-fixed-dim" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Microsoft Office</span>
+                    <span class="font-code-inline text-code-inline text-secondary">85%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Computer Troubleshooting</span>
+                    <span class="font-code-inline text-code-inline text-secondary">75%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-secondary-fixed-dim" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-label-md text-label-md text-on-surface">Networking Fundamentals</span>
+                    <span class="font-code-inline text-code-inline text-secondary">70%</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full rounded-full bg-primary-container" style="width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==========================================
+       SECTION 4: FEATURED PROJECTS (id="projects")
+       ========================================== -->
+      <section class="w-full py-16 md:py-24 bg-surface-container-low/50" id="projects">
+        <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider mb-3">
+                <span class="material-symbols-outlined text-[14px]">source</span>
+                <span>CHAPTER 03</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-semibold">
+                Quiz Achievements & Projects
+              </h2>
+              <p class="font-body-lg text-secondary text-secondary max-w-xl mt-2">
+                Proof of what I can do: my assessment scores and the projects I have built throughout my Information Technology journey.
+              </p>
+            </div>
+            <!-- Project Filter Buttons -->
+            <div class="flex flex-wrap items-center gap-2" id="project-filters">
+              <button
+                class="project-tab-btn active px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-all"
+                data-category="all" type="button">
+                All
+              </button>
+              <button
+                class="project-tab-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all"
+                data-category="quiz" type="button">
+                Quizzes
+              </button>
+              <button
+                class="project-tab-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all"
+                data-category="mobile" type="button">
+                Web Dev Projects
+              </button>
+              <button
+                class="project-tab-btn px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all"
+                data-category="projects" type="button">
+                Projects
+              </button>
+            </div>
+          </div>
+          <!-- 4 Project Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+            <!-- Project 1 -->
+            <div
+              class="project-card flex flex-col justify-between rounded-3xl bg-surface-container-lowest overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
+              data-category="quiz">
+              <div>
+                <div class="relative w-full h-52 overflow-hidden bg-surface-container">
+                  <img alt="FE Semifinal Quiz 1 score"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    src="quizzes.jpg" />
+                  <div
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm font-semibold shadow-sm text-secondary">
+                    Quiz 1
+                  </div>
+                </div>
+                <div class="p-6 md:p-7">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">
+                    FE - Semifinal Quiz 1
+                  </h3>
+                  <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+                    My score for the FE Semifinal Quiz 1 assessment.
+                  </p>
+                  <p class="text-primary font-bold mt-4">Score: 18/20 (97%)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+              class="project-card flex flex-col justify-between rounded-3xl bg-surface-container-lowest overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
+              data-category="quiz">
+              <div>
+                <div class="relative w-full h-52 overflow-hidden bg-surface-container">
+                  <img alt="FE Semifinal Quiz 2 score"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    src="quizzes.jpg" />
+                  <div
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm font-semibold shadow-sm text-secondary">
+                    Quiz 2
+                  </div>
+                </div>
+                <div class="p-6 md:p-7">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">
+                    FE - Semifinal Quiz 2
+                  </h3>
+                  <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+                    My score for the FE Semifinal Quiz 2 assessment.
+                  </p>
+                  <p class="text-primary font-bold mt-4">Score: 28/30 (97%)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+              class="project-card flex flex-col justify-between rounded-3xl bg-surface-container-lowest overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
+              data-category="mobile">
+              <div>
+                <div class="relative w-full h-52 overflow-hidden bg-surface-container">
+                  <img alt="Keyboard Tester"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    src="Keyboard.jpg" />
+                  <div
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm font-semibold shadow-sm text-secondary">
+                    Keyboard Tester
+                  </div>
+                </div>
+                <div class="p-6 md:p-7">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">
+                    Keyboard Tester
+                  </h3>
+                  <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+                    My First Web Application I created in first year.
+                  </p>
+                  <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-secondary-container transition-colors shadow-sm"
+                    href="https://github.com/kupalsteam-dotcom/keyboard-tester" rel="noopener noreferrer" target="_blank">
+                    <span class="material-symbols-outlined text-[18px]">terminal</span>
+                    <span class="font-label-md text-label-md">View on GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+              class="project-card flex flex-col justify-between rounded-3xl bg-surface-container-lowest overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
+              data-category="mobile">
+              <div>
+                <div class="relative w-full h-52 overflow-hidden bg-surface-container">
+                  <img alt="First Game Project"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    src="FirstGame.jpg" />
+                  <div
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm font-semibold shadow-sm text-secondary">
+                    Target Blaster Game
+                  </div>
+                </div>
+                <div class="p-6 md:p-7">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">
+                    Target Blaster Game
+                  </h3>
+                  <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+                    My First Game Project I created in first year.
+                  </p>
+                  <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-secondary-container transition-colors shadow-sm"
+                    href="https://github.com/kupalsteam-dotcom/first-game" rel="noopener noreferrer" target="_blank">
+                    <span class="material-symbols-outlined text-[18px]">terminal</span>
+                    <span class="font-label-md text-label-md">View on GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+             <div
+              class="project-card flex flex-col justify-between rounded-3xl bg-surface-container-lowest overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
+              data-category="mobile">
+              <div>
+                <div class="relative w-full h-52 overflow-hidden bg-surface-container">
+                  <img alt="First Game Project"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    src="MatayaTaya.jpg" />
+                  <div
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm font-semibold shadow-sm text-secondary">
+                    Mataya Taya Game
+                  </div>
+                </div>
+                <div class="p-6 md:p-7">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">
+                    Mataya Taya Game
+                  </h3>
+                  <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+                    My First Group Game Dev we created in 3rd year.
+                  </p>
+                  <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-secondary-container transition-colors shadow-sm"
+                    href="https://github.com/kupalsteam-dotcom/mataya-taya-game" rel="noopener noreferrer" target="_blank">
+                    <span class="material-symbols-outlined text-[18px]">terminal</span>
+                    <span class="font-label-md text-label-md">View on GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+      </section>
+      <!-- ==========================================
+       SECTION 5: CONTACT (id="contact")
+       ========================================== -->
+      <section class="w-full py-16 md:py-24 bg-surface" id="contact">
+        <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col items-center text-center mb-12 md:mb-16">
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider mb-3">
+              <span class="material-symbols-outlined text-[14px]">send</span>
+              <span>Chapter 04</span>
+            </div>
+            <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-semibold">
+              Let’s Connect
+            </h2>
+            <p class="font-body-lg text-body-lg text-secondary max-w-2xl mt-2 leading-relaxed">
+              Have a question or want to connect? Feel free to contact me about IT projects, collaboration, or opportunities
+              to learn and grow together.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <!-- Left Column: Contact Cards & Direct Reaches -->
+            <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <!-- Email Card with Copy Feature -->
+                <div
+                  class="p-5 md:p-6 rounded-3xl bg-surface-container-low shadow-sm flex items-center justify-between group hover:bg-surface-container transition-colors">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+                      <span class="material-symbols-outlined text-[22px]">mail</span>
+                    </div>
+                    <div>
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Direct
+                        Email</span>
+                      <a class="font-label-lg text-label-lg text-on-surface hover:text-primary transition-colors"
+                        href="mailto:jundeldelcarmen@gmail.com">
+                        jundeldelcarmen@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    class="p-2.5 rounded-full bg-surface-container-lowest text-secondary hover:text-on-surface transition-all shadow-sm"
+                    data-email="jundeldelcarmen@gmail.com" id="copy-email-btn" title="Copy email address"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                  </button>
+                </div>
+                <!-- Location Card -->
+                <div class="p-5 md:p-6 rounded-3xl bg-surface-container-low shadow-sm flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">location_on</span>
+                  </div>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Location
+                      Preference</span>
+                    <p class="font-label-lg text-label-lg text-on-surface">
+                      3588 Sitio Lower Gun Club Banawa
+                    </p>
+                  </div>
+                </div>
+                <!-- Availability Status Banner -->
+                <div class="p-5 md:p-6 rounded-3xl bg-secondary-container/50 shadow-sm flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+                    <span class="material-symbols-outlined text-[22px]">event_available</span>
+                  </div>
+                  <div>
+                    <span
+                      class="font-label-sm text-label-sm text-on-secondary-container uppercase tracking-wider block font-semibold">AVAILABILITY</span>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                      Open to internships, entry-level opportunities, and IT project collaboration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Social Links Strip -->
+              <div class="pt-2">
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block mb-3">Connect via
+                  Networks</span>
+                <div class="flex items-center gap-3">
+                  <!-- TikTok -->
+                  <a class="flex-1 py-3 px-4 rounded-2xl bg-surface-container-low hover:bg-secondary-container text-on-surface flex items-center justify-center gap-2 transition-all shadow-sm"
+                    href="https://www.tiktok.com/@overthink" rel="noopener noreferrer" target="_blank">
+                    <i style="font-size:24px" class="fa">&#xf16d;</i>
+                    <span class="font-label-md text-label-md">TikTok</span>
+                  </a>
+                  <!-- Facebook -->
+                  <a class="flex-1 py-3 px-4 rounded-2xl bg-surface-container-low hover:bg-secondary-container text-on-surface flex items-center justify-center gap-2 transition-all shadow-sm"
+                    href="https://www.facebook.com/JEDCyber.GitHub" rel="noopener noreferrer" target="_blank">
+                     <i style="font-size:24px" class="fa">&#xf09a;</i>
+                    <span class="font-label-md text-label-md">Facebook</span>
+                  </a>
+                  <!-- Instagram -->
+                  <a class="flex-1 py-3 px-4 rounded-2xl bg-surface-container-low hover:bg-secondary-container text-on-surface flex items-center justify-center gap-2 transition-all shadow-sm"
+                    href="https://www.instagram.com/lwky_sly" rel="noopener noreferrer" target="_blank">
+                    <i style="font-size:24px" class="fa">&#xf16d;</i>
+                    <span class="font-label-md text-label-md">Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Clean Interactive Contact Form -->
+            <div class="lg:col-span-7">
+              <div class="p-6 md:p-10 rounded-3xl bg-surface-container-lowest shadow-lg">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">
+                  Send a Direct Message
+                </h3>
+                <p class="font-body-sm text-body-sm text-secondary mb-6">
+                  Tell me about your project, opportunity, or question.
+                </p>
+                <form class="space-y-4" id="portfolio-contact-form">
+                  <!-- Name & Email Row -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex flex-col space-y-1.5">
+                      <label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider"
+                        for="contact-name">Your Name</label>
+                      <input
+                        class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary-container transition-all font-body-md text-body-md"
+                        id="contact-name" placeholder="Enter your name" required="" type="text" />
+                    </div>
+                    <div class="flex flex-col space-y-1.5">
+                      <label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider"
+                        for="contact-email">Your Email</label>
+                      <input
+                        class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary-container transition-all font-body-md text-body-md"
+                        id="contact-email" placeholder="Enter your email address" required="" type="email" />
+                    </div>
+                  </div>
+                  <!-- Subject -->
+                  <div class="flex flex-col space-y-1.5">
+                    <label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider"
+                      for="contact-subject">Subject / Purpose</label>
+                    <input
+                      class="h-12 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary-container transition-all font-body-md text-body-md"
+                      id="contact-subject" placeholder="e.g. IT Project Collaboration"
+                      required="" type="text" />
+                  </div>
+                  <!-- Message Body -->
+                  <div class="flex flex-col space-y-1.5">
+                    <label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider"
+                      for="contact-message">Message</label>
+                    <textarea
+                      class="p-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary-container transition-all font-body-md text-body-md resize-none"
+                      id="contact-message"
+                      placeholder="Write your message here..."
+                      required="" rows="4"></textarea>
+                  </div>
+                  <!-- Submit CTA -->
+                  <div class="pt-2 flex items-center justify-between">
+                    <span class="font-body-sm text-body-sm text-primary font-medium hidden" id="form-feedback"></span>
+                    <button
+                      class="ml-auto inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary shadow-md hover:shadow-lg transition-all duration-300 font-label-md text-label-md cursor-pointer"
+                      id="form-submit-btn" type="submit">
+                      <span>Send Message</span>
+                      <span class="material-symbols-outlined text-[18px]">send</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Notification Toast for Copy to Clipboard -->
+      <div
+        class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 px-5 py-3 rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-2xl flex items-center gap-2.5 font-label-md text-label-md"
+        id="toast">
+        <span class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+        <span id="toast-message">Email copied to clipboard!</span>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("#main-nav .nav-link");
+
+    function setActiveLink() {
+        const currentSection = window.location.hash || "#home";
+
+        navLinks.forEach(link => {
+            const isActive = link.getAttribute("href") === currentSection;
+
+            link.classList.toggle("bg-secondary-container", isActive);
+            link.classList.toggle("text-on-secondary-container", isActive);
+            link.classList.toggle("font-semibold", isActive);
+            link.classList.toggle("shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]", isActive);
+
+            link.classList.toggle("text-on-surface-variant", !isActive);
+            link.classList.toggle("hover:bg-surface-container-high", !isActive);
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(item => {
+                item.classList.remove(
+                    "bg-secondary-container",
+                    "text-on-secondary-container",
+                    "font-semibold",
+                    "shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]"
+                );
+
+                item.classList.add("text-on-surface-variant");
+            });
+
+            this.classList.add(
+                "bg-secondary-container",
+                "text-on-secondary-container",
+                "font-semibold",
+                "shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]"
+            );
+
+            this.classList.remove("text-on-surface-variant");
+        });
+    });
+
+    window.addEventListener("hashchange", setActiveLink);
+
+    setActiveLink();
+});
+      (function () {
+        // 1. Smooth Scrolling for Anchor Links with Header Offset
+        const scrollLinks = document.querySelectorAll('.scroll-link, a[href^="#"]');
+        scrollLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#') && href.length > 1) {
+              const target = document.querySelector(href);
+              if (target) {
+                e.preventDefault();
+                const headerOffset = 110; // Clearance for fixed app shell + subnav
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }
+          });
+        });
+
+        // 2. Project Category Filtering Logic
+        const filterTabs = document.querySelectorAll('.project-tab-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterTabs.forEach(tab => {
+          tab.addEventListener('click', function () {
+            filterTabs.forEach(t => {
+              t.classList.remove('bg-primary-container', 'text-on-primary-container');
+              t.classList.add('bg-surface-container', 'text-on-surface-variant');
+            });
+            this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+            this.classList.add('bg-primary-container', 'text-on-primary-container');
+
+            const category = this.getAttribute('data-category');
+            projectCards.forEach(card => {
+              const cardCategories = card.getAttribute('data-category') || '';
+              if (category === 'all' || cardCategories.includes(category)) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+
+        // 3. Skills Filter Pills Logic
+        const skillFilters = document.querySelectorAll('.skill-filter-btn');
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        skillFilters.forEach(btn => {
+          btn.addEventListener('click', function () {
+            skillFilters.forEach(b => {
+              b.classList.remove('bg-primary-container', 'text-on-primary-container');
+              b.classList.add('bg-surface-container', 'text-on-surface-variant');
+            });
+            this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+            this.classList.add('bg-primary-container', 'text-on-primary-container');
+
+            const target = this.getAttribute('data-target');
+            skillCards.forEach(card => {
+              const domain = card.getAttribute('data-domain');
+              if (target === 'all' || domain === target) {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+                card.style.display = 'block';
+              } else {
+                card.style.opacity = '0.35';
+                card.style.transform = 'scale(0.98)';
+              }
+            });
+          });
+        });
+
+        // 4. Toast Notification Helper
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        function showToast(message) {
+          if (!toast) return;
+          toastMsg.textContent = message;
+          toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+          toast.classList.add('translate-y-0', 'opacity-100');
+          setTimeout(() => {
+            toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.remove('translate-y-0', 'opacity-100');
+          }, 3200);
+        }
+
+        // 5. Copy Email to Clipboard
+        const copyBtn = document.getElementById('copy-email-btn');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function () {
+            const email = this.getAttribute('data-email');
+            if (navigator.clipboard && email) {
+              navigator.clipboard.writeText(email).then(() => {
+                showToast('Email address copied to clipboard!');
+              }).catch(() => {
+                showToast('Ready to email: ' + email);
+              });
+            } else {
+              showToast('Ready to email: ' + email);
+            }
+          });
+        }
+
+        // 6. Contact Form Interactive Submit Feedback
+        const contactForm = document.getElementById('portfolio-contact-form');
+        const submitBtn = document.getElementById('form-submit-btn');
+        const feedback = document.getElementById('form-feedback');
+
+        if (contactForm) {
+          contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const originalText = submitBtn.innerHTML;
+
+            // Show subtle submitting state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending...</span><span class="material-symbols-outlined text-[18px] animate-spin">refresh</span>';
+
+            setTimeout(() => {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<span>Sent Successfully!</span><span class="material-symbols-outlined text-[18px]">done</span>';
+              submitBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+              submitBtn.classList.add('bg-primary', 'text-on-primary');
+
+              if (feedback) {
+                feedback.textContent = 'Thank you! Your dispatch has been logged.';
+                feedback.classList.remove('hidden');
+              }
+              contactForm.reset();
+              showToast('Message sent! Jundel will get back to you shortly.');
+
+              setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+                submitBtn.classList.remove('bg-primary', 'text-on-primary');
+                if (feedback) {
+                  feedback.classList.add('hidden');
+                }
+              }, 4000);
+            }, 1200);
+          });
+        }
+      })();
+    </script>
+  </main>
+  <footer class="w-full bg-surface-container-low shadow-[0_-1px_12px_rgba(45,41,38,0.02)]">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin py-space-xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-space-lg pb-space-lg">
+        <div class="flex flex-col items-center md:items-start">
+          <div class="flex items-center gap-3"><div class="flex h-10 w-10 items-center justify-center rounded-3xl bg-[#FF2A4B] text-lg font-bold text-white shadow-md">JD</div>
+          <span class="text-lg font-bold text-white">Jundel Eivan del Carmen</span>
+          <p class="font-body-sm text-body-sm text-secondary mt-1 text-center md:text-left">Fourth-Year BSIT Student •
+            Aspiring IT Professional</p>
+        </div>
+        <div class="flex items-center gap-space-md"><a
+            class="p-2.5 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-on-secondary-container transition-all shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]"
+            href="https://github.com/JEDCyber" title="Terminal &amp; Code Repositories" target="_blank"><span
+              class="material-symbols-outlined text-[20px]">terminal</span></a><a
+            class="p-2.5 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-on-secondary-container transition-all shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]"
+            href="https://www.facebook.com/JEDCyber.GitHub" title="Professional Network" target="_blank"><i style="font-size:24px" class="fa">&#xf09a;</i></a><a
+            class="p-2.5 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-on-secondary-container transition-all shadow-[inset_0_1px_1px_rgba(108,196,208,0.15)]"
+            href="https://www.instagram.com/lwky_sly" title="Direct Dispatch" target="_blank"><i style="font-size:24px" class="fa">&#xf16d;</i></a></div>
+        </div>
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md bg-surface-container-low">
+        <p class="font-body-sm text-body-sm text-on-surface-variant/80">© 2026 Jundel Eivan del Carmen. All rights reserved.</p>
+        <div class="flex items-center gap-space-md"><span
+            class="font-code-inline text-code-inline text-secondary">v1.0.0 / IT-PORTFOLIO</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
